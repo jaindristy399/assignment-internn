@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 1 | JavaScript Variables</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="wrap">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">JavaScript · Assignment 01</p>
+        <h1>Variables &amp; Data Types</h1>
+        <p class="subtitle">Explore how JavaScript stores information. Edit the profile, choose skills, and run the code to see each value and its data type.</p>
+      </div>
+      <span class="pill">Interactive Demo</span>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h2>👤 User Profile</h2>
+        <p class="hint">Change the values, then click <strong>Run JavaScript</strong>.</p>
+
+        <label for="name">User name</label>
+        <input id="name" type="text" value="Alice" maxlength="50">
+
+        <label for="age">Age</label>
+        <input id="age" type="number" value="25" min="0" max="120">
+
+        <div class="checkline">
+          <input id="employed" type="checkbox" checked>
+          <label for="employed">Is employed?</label>
+        </div>
+
+        <label>Skills (select one or more)</label>
+        <div class="skillbox">
+          <label class="skill"><input type="checkbox" name="skills" value="HTML" checked> HTML</label>
+          <label class="skill"><input type="checkbox" name="skills" value="CSS" checked> CSS</label>
+          <label class="skill"><input type="checkbox" name="skills" value="JavaScript" checked> JavaScript</label>
+          <label class="skill"><input type="checkbox" name="skills" value="Python"> Python</label>
+          <label class="skill"><input type="checkbox" name="skills" value="Java"> Java</label>
+        </div>
+
+        <div class="actions">
+          <button class="primary" id="run">▶ Run JavaScript</button>
+          <button class="secondary" id="reset">Reset example</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>💻 Console Output</h2>
+        <p class="hint">The output uses JavaScript's <code>typeof</code> operator.</p>
+        <div class="output">
+          <div class="output-head">
+            <span><i class="dot"></i>console</span>
+            <span id="status">Ready</span>
+          </div>
+          <pre id="result" aria-live="polite">Click “Run JavaScript” to display the values and types.</pre>
+        </div>
+
+        <div class="concepts">
+          <div class="concept">
+            <code>var</code>
+            <p>Function-scoped; can be redeclared. Used for the user's name.</p>
+          </div>
+          <div class="concept">
+            <code>let</code>
+            <p>Block-scoped; can be reassigned. Used for age.</p>
+          </div>
+          <div class="concept">
+            <code>const</code>
+            <p>Block-scoped; cannot be reassigned. Used for employment and skills.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>Assignment 1 · Variables, Data Types, and Console Operations</footer>
+  </main>
+</body>
+</html>
