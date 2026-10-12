@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 3 | Grade Checker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">JavaScript · Assignment 03</p>
+      <h1>Test Score &amp; Grade Checker</h1>
+      <p class="intro">Enter a test score to see how conditional statements, a switch statement, and a ternary operator can determine a letter grade and pass/fail status.</p>
+    </header>
+
+    <section class="layout">
+      <div class="panel">
+        <div class="heading">
+          <div class="icon">📝</div>
+          <div><h2>Enter your score</h2><p>Use a score between 0 and 100.</p></div>
+        </div>
+        <label for="score">Test score</label>
+        <input id="score" type="number" min="0" max="100" step="1" value="85" placeholder="Enter score">
+        <div class="buttons">
+          <button id="check" class="primary">Check grade</button>
+          <button id="prompt-score" class="secondary">Enter using prompt</button>
+          <button id="reset" class="quiet">Reset</button>
+        </div>
+        <p class="note">The default score is 85, which produces the expected example output.</p>
+      </div>
+
+      <div class="panel result-panel">
+        <div class="heading">
+          <div class="icon">🎓</div>
+          <div><h2>Your result</h2><p id="message">Ready to check your grade.</p></div>
+        </div>
+        <div class="result-card">
+          <div class="score-circle"><span id="score-value">85</span><small>/ 100</small></div>
+          <div class="result-lines">
+            <div class="result-row"><span>Score</span><strong id="score-output">85</strong></div>
+            <div class="result-row"><span>Grade</span><strong class="grade" id="grade-output">B</strong></div>
+            <div class="result-row"><span>Status</span><strong class="passed" id="status-output">Passed</strong></div>
+          </div>
+        </div>
+        <button id="copy" class="copy-button">Copy result</button>
+        <p id="copy-message" class="copy-message" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="panel logic-panel">
+      <h2>JavaScript concepts used</h2>
+      <div class="concepts">
+        <article><code>if...else</code><p>Checks the score range and validates that it is between 0 and 100.</p></article>
+        <article><code>switch</code><p>Chooses a letter grade based on the score category.</p></article>
+        <article><code>ternary ? :</code><p>Displays “Passed” for a score of 50 or more; otherwise “Failed”.</p></article>
+      </div>
+      <p class="grading-note">Grading scale used: A = 90–100, B = 80–89, C = 70–79, D = 60–69, F = below 60. Passing score: 50.</p>
+    </section>
+
+    <footer>Assignment 3 · Conditional Logic Implementation</footer>
+  </main>
+</body>
+</html>

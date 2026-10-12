@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 2 | Tip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">JavaScript · Assignment 02</p>
+      <h1>Bill &amp; Tip Calculator</h1>
+      <p class="intro">Enter a bill amount and tip percentage to calculate the tip and total. This interactive project demonstrates prompts, type conversion, arithmetic operators, and assignment operators.</p>
+    </header>
+    <section class="layout">
+      <div class="panel">
+        <div class="panel-heading"><span class="icon">🧾</span><div><h2>Bill details</h2><p>Enter values below or use the prompt button.</p></div></div>
+        <label for="bill">Bill amount ($)</label>
+        <input id="bill" type="number" min="0" step="0.01" value="100" placeholder="e.g. 100">
+        <label for="tip">Tip percentage (%)</label>
+        <input id="tip" type="number" min="0" max="100" step="1" value="15" placeholder="e.g. 15">
+        <div class="buttons">
+          <button id="calculate" class="primary">Calculate total</button>
+          <button id="prompt-input" class="secondary">Enter using prompts</button>
+          <button id="reset" class="quiet">Reset</button>
+        </div>
+        <p class="note">Click “Enter using prompts” to try JavaScript's required <code>prompt()</code> input method.</p>
+      </div>
+      <div class="panel">
+        <div class="panel-heading"><span class="icon">✨</span><div><h2>Calculation result</h2><p id="status">Ready to calculate</p></div></div>
+        <div class="receipt">
+          <div class="receipt-row"><span>Subtotal</span><strong id="subtotal">$100</strong></div>
+          <div class="receipt-row"><span>Tip Percentage</span><strong id="percentage">15%</strong></div>
+          <div class="receipt-row"><span>Calculated Tip</span><strong id="calculated-tip">$15</strong></div>
+          <div class="receipt-total"><span>Total Amount to Pay</span><strong id="total">$115</strong></div>
+        </div>
+        <div class="formula"><span class="formula-label">Formula used</span><code>tip = subtotal * (percentage / 100)</code><code>totalAmount += calculatedTip</code></div>
+        <button id="copy-result" class="copy-button">Copy formatted result</button>
+        <p id="copy-status" class="copy-status" aria-live="polite"></p>
+      </div>
+    </section>
+    <section class="learning panel">
+      <h2>What this assignment demonstrates</h2>
+      <div class="learning-grid">
+        <article><code>prompt()</code><p>Collects the bill amount and tip percentage as text.</p></article>
+        <article><code>Number()</code><p>Converts prompt text into numeric values.</p></article>
+        <article><code>Arithmetic</code><p>Uses multiplication and division to calculate the tip.</p></article>
+        <article><code>Assignment</code><p>Uses <code>+=</code> to add the tip to the subtotal.</p></article>
+      </div>
+    </section>
+    <footer>Assignment 2 · Operators, Expressions, and Input Handling</footer>
+  </main>
+</body>
+</html>

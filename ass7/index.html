@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Inventory Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Inventory</h1>
+        <p>Manage products and view inventory analytics.</p>
+
+        <form id="productForm">
+            <input id="name" type="text" placeholder="Product name" required>
+            <input id="price" type="number" placeholder="Product price" min="0.01" step="0.01" required>
+            <button type="submit">Add Product</button>
+        </form>
+
+        <button id="analyze">Analyze Inventory</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
